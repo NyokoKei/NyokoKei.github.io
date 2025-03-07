@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hong Hai Ngo</title>
   <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -22,7 +22,7 @@
       margin: 0;
       font-size: 2.5em;
     }
-    header h2 {
+    header h3 {
       margin: 5px 0;
       font-size: 1.2em;
       color: #555;
@@ -42,44 +42,44 @@
     main {
       padding: 20px;
     }
-    table {
+    /* Main table styles */
+    table.main-table {
       width: 90%;
       border-collapse: collapse;
       margin-left: 50px; /* Extra space from the left border */
     }
-    table tr {
+    /* Only apply a border line to the first three rows */
+    table.main-table tr:not(:last-child) {
       border-bottom: 1px solid #ccc;
     }
     td {
       padding: 10px;
       vertical-align: top;
+      text-align: left;
     }
     .section-name {
       width: 25%;
-/*       font-weight: bold; */
       padding-right: 20px;
     }
     .section-attributes {
       width: 75%;
       padding-left: 20px;
     }
-    /* Styles for the nested education table */
+    /* Nested education table styles */
     .education-table {
       width: 100%;
       border-collapse: collapse;
     }
     .education-table td {
-/*       padding: 5px 10px; */
       vertical-align: top;
     }
     .edu-year {
       width: 30%;
-/*       font-weight: bold; */
     }
     .edu-details {
       width: 70%;
     }
-    /* Styles for the nested experience table */
+    /* Nested experience table styles */
     .experience-table {
       width: 100%;
       border-collapse: collapse;
@@ -90,7 +90,6 @@
     }
     .exp-year {
       width: 30%;
-/*       font-weight: bold; */
     }
     .exp-details {
       width: 70%;
@@ -114,11 +113,11 @@
     </div>
   </header>
   <main>
-    <table>
+    <table class="main-table">
       <tr>
         <td class="section-name">Research Field</td>
         <td class="section-attributes">
-          My research focuses on Natural Langauge Processing, Machine Translation, Gender Bias
+          My research focuses on Natural Language Processing, Machine Translation, Gender Bias
         </td>
       </tr>
       <tr>
@@ -132,7 +131,8 @@
               </td>
               <td class="edu-year">
                 Sendai, Japan<br>
-                Oct 2024 – Present</td>
+                Oct 2024 – Present
+              </td>
             </tr>
             <tr>
               <td class="edu-details">
@@ -141,9 +141,9 @@
               </td>
               <td class="edu-year">
                 Kyiv, Ukraine<br>
-                Sep 2018 – Jun 2022</td>
+                Sep 2018 – Jun 2022
+              </td>
             </tr>
-            
           </table>
         </td>
       </tr>
@@ -157,8 +157,9 @@
                 Data Analyst
               </td>
               <td class="exp-year">
-                Kyiv, Ukraine
-                <br>Oct 2021 - Oct 2022</td>
+                Kyiv, Ukraine<br>
+                Oct 2021 - Oct 2022
+              </td>
             </tr>
           </table>
         </td>
@@ -166,10 +167,11 @@
       <tr>
         <td class="section-name">Publications</td>
         <td class="section-attributes">
-        <p><strong>Towards Equitable Translation: Gender Bias in Large Language Models</strong><br>
-          <u>Hong Hai Ngo</u>, Yunmeng Li, Keisuke Sakaguchi<br>
-          言語処理学会第31回年次大会 (NLP 2025)
-        </p>
+          <p>
+            <strong>Towards Equitable Translation: Gender Bias in Large Language Models</strong><br>
+            <u>Hong Hai Ngo</u>, Yunmeng Li, Keisuke Sakaguchi<br>
+            言語処理学会第31回年次大会 (NLP 2025)
+          </p>
         </td>
       </tr>
     </table>
