@@ -27,9 +27,9 @@
       margin: 0;
       font-size: 2.5em;
     }
-    header h2 {
+    header h4 {
       margin: 5px 0;
-      font-size: 1.2em;
+      font-size: 1em;
       color: #555;
     }
     .contacts {
@@ -39,10 +39,7 @@
       margin: 0 10px;
       color: #333;
       text-decoration: none;
-      font-size: 1em;
-    }
-    .contacts a i {
-      margin-right: 5px;
+      font-size: 1.5em;
     }
     main {
       padding: 20px;
@@ -68,57 +65,56 @@
       width: 75%;
       padding-left: 20px;
     }
-    /* Styles for the nested education table */
+    /* Nested table for Education records */
     .education-table {
       width: 100%;
       border-collapse: collapse;
     }
-    .education-table td {
+    .edu-entry {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+    .edu-entry td {
       padding: 5px 10px;
       vertical-align: top;
     }
-    .edu-year {
-      width: 30%;
+    .edu-univ {
       font-weight: bold;
     }
-    .edu-details {
-      width: 70%;
-    }
-    /* Styles for the nested experience table */
+    /* Nested table for Experience records */
     .experience-table {
       width: 100%;
       border-collapse: collapse;
     }
-    .experience-table td {
+    .exp-entry {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+    .exp-entry td {
       padding: 5px 10px;
       vertical-align: top;
     }
-    .exp-year {
-      width: 30%;
+    .exp-company {
       font-weight: bold;
-    }
-    .exp-details {
-      width: 70%;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Hong Hai Ngo</h1>
-    <h4>Master's Student @ <a href="https://www.nlp.ecei.tohoku.ac.jp" target="_blank" rel="noopener noreferrer">Tohoku University NLP lab</a></h4>
+    <h4>
+      Master's Student @ 
+      <a href="https://www.nlp.ecei.tohoku.ac.jp" target="_blank" rel="noopener noreferrer">
+        Tohoku University NLP lab
+      </a>
+    </h4>
     <div class="contacts">
-      <a href="https://github.com/NyokoKei" target="_blank">
-        <i class="fab fa-github"> ::before == $0</i>
-      </a>
-      <a href="https://linkedin.com/in/johndoe" target="_blank">
-        <i class="fab fa-linkedin">::before == $0</i>
-      </a>
-      <a href="mailto:johndoe@example.com">
-        <i class="fas fa-envelope">::before == $0</i>
-      </a>
-      <a href="tel:08075915218">
-        <i class="fas fa-phone"> ::before == $0</i>
-      </a>
+      <a href="https://github.com/NyokoKei" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/johndoe" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:johndoe@example.com"><i class="fas fa-envelope"></i></a>
+      <a href="tel:08075915218"><i class="fas fa-phone"></i></a>
     </div>
   </header>
   <main>
@@ -134,17 +130,31 @@
         <td class="section-attributes">
           <table class="education-table">
             <tr>
-              <td class="edu-year">2015–2019</td>
-              <td class="edu-details">
-                B.Sc. in Computer Science<br>
-                University of Example
+              <td>
+                <table class="edu-entry">
+                  <tr>
+                    <td class="edu-univ">University of Example</td>
+                    <td class="edu-location">Example City, Country</td>
+                  </tr>
+                  <tr>
+                    <td class="edu-spec">B.Sc. in Computer Science</td>
+                    <td class="edu-years">2015–2019</td>
+                  </tr>
+                </table>
               </td>
             </tr>
             <tr>
-              <td class="edu-year">2019–2021</td>
-              <td class="edu-details">
-                M.Sc. in Artificial Intelligence<br>
-                University of Example
+              <td>
+                <table class="edu-entry">
+                  <tr>
+                    <td class="edu-univ">Tohoku University</td>
+                    <td class="edu-location">Sendai, Japan</td>
+                  </tr>
+                  <tr>
+                    <td class="edu-spec">M.Sc. in Artificial Intelligence</td>
+                    <td class="edu-years">2019–2021</td>
+                  </tr>
+                </table>
               </td>
             </tr>
           </table>
@@ -155,17 +165,31 @@
         <td class="section-attributes">
           <table class="experience-table">
             <tr>
-              <td class="exp-year">2020–2021</td>
-              <td class="exp-details">
-                Research Assistant<br>
-                University of Example AI Lab
+              <td>
+                <table class="exp-entry">
+                  <tr>
+                    <td class="exp-company">University of Example AI Lab</td>
+                    <td class="exp-location">Example City, Country</td>
+                  </tr>
+                  <tr>
+                    <td class="exp-role">Research Assistant</td>
+                    <td class="exp-years">2020–2021</td>
+                  </tr>
+                </table>
               </td>
             </tr>
             <tr>
-              <td class="exp-year">Summer 2019</td>
-              <td class="exp-details">
-                Intern<br>
-                Tech Innovators Inc.
+              <td>
+                <table class="exp-entry">
+                  <tr>
+                    <td class="exp-company">Tech Innovators Inc.</td>
+                    <td class="exp-location">Tech City, Country</td>
+                  </tr>
+                  <tr>
+                    <td class="exp-role">Intern</td>
+                    <td class="exp-years">Summer 2019</td>
+                  </tr>
+                </table>
               </td>
             </tr>
           </table>
