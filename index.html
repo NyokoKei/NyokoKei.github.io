@@ -2,172 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jane Doe – Researcher CV</title>
+  <title>Researcher CV</title>
+
+  <!-- Include Bulma CSS -->
+  <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
   <style>
-    /* Basic reset and box-sizing for consistent spacing */
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      line-height: 1.6;
-      max-width: 800px;
-    }
-
-    /* "Deep Rose" color for headings */
-    h1, h2 {
-      color: #C85FA4; /* Adjust this hex if you want a different shade */
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    header p {
-      margin: 5px 0;
-      font-style: italic;
-      color: #555;
-    }
-
-    /* Contact Info / Social Media styling */
-    .contact-info {
-      margin: 10px 0;
-    }
-    .social-media {
-      margin-top: 5px;
-    }
-    .social-media a {
-      text-decoration: none;
-      color: #C85FA4;
-      margin-right: 10px;
-    }
-
-    /* Two-column layout for sections:
-       Heading on the left, content on the right */
-    section {
-      display: flex;
-      margin-bottom: 20px;
-      align-items: flex-start; /* Ensures heading is aligned at the top */
-    }
-
-    /* Left column: heading */
-    section h2 {
-      flex: 0 0 150px; /* Fixed width for headings */
-      margin: 0;
-      text-transform: uppercase;
-      font-size: 1.2em;
-      /* Removed border-right to eliminate the vertical line */
-      padding-right: 10px;
-      box-sizing: border-box;
-    }
-
-    /* Right column: content */
-    section .content {
-      flex: 1;
-      padding-left: 15px;
-    }
-
-    ul {
-      list-style-type: disc;
-      margin: 0;         /* Remove default margin */
-      padding-left: 20px;/* Space for bullet indentation */
+    /* Override .subtitle color to deep rose */
+    .subtitle {
+      color: #C85FA4 !important;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Jane Doe</h1>
-    <p>Ph.D. in Molecular Biology</p>
-  </header>
-
-  <!-- CONTACT / SOCIAL MEDIA -->
-  <section>
-    <h2>Contact</h2>
-    <div class="content">
-      <div class="contact-info">
-        <p><strong>Email:</strong> jane.doe@example.com</p>
-        <p><strong>Phone:</strong> +1 (123) 456-7890</p>
-        <p><strong>Address:</strong> 123 Science Rd, University Town, USA</p>
+  <!-- Education Section -->
+  <div class="section mx-6">
+    <div class="columns">
+      <div class="column is-2 has-text-right has-text-centered-mobile">
+        <p class="subtitle">Education</p>
       </div>
-      <div class="social-media">
-        <strong>Social Media:</strong><br>
-        <a href="https://twitter.com/janedoe" target="_blank">Twitter</a>
-        <a href="https://linkedin.com/in/janedoe" target="_blank">LinkedIn</a>
-        <a href="https://github.com/janedoe" target="_blank">GitHub</a>
+      <div class="column">
+        <div class="content">
+          <table>
+            <tbody>
+              <tr>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>PhD, Information Sciences (in progress)</strong><br>
+                  <small>
+                    April 2021 – *March 2025 (planned)<br>
+                    <i>Graduate School of Information Sciences, Tohoku University</i>
+                  </small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Master of Science in Computing</strong><br>
+                  <small>
+                    October 2016 – September 2018<br>
+                    <i>Faculty of Electrical Engineering and Computing, 
+                       University of Zagreb</i>
+                  </small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Bachelor of Science in Computing</strong><br>
+                  <small>
+                    October 2013 – September 2016<br>
+                    <i>Faculty of Electrical Engineering and Computing, 
+                       University of Zagreb</i>
+                  </small>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
+      <div class="column is-1"></div>
     </div>
-  </section>
+  </div>
 
-  <!-- EDUCATION -->
-  <section>
-    <h2>Education</h2>
-    <div class="content">
-      <ul>
-        <li><strong>Ph.D. in Molecular Biology</strong>, XYZ University (2016–2020)</li>
-        <li><strong>M.S. in Biochemistry</strong>, ABC University (2014–2016)</li>
-        <li><strong>B.S. in Biology</strong>, DEF College (2010–2014)</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section>
-    <h2>Experience</h2>
-    <div class="content">
-      <ul>
-        <li><strong>Postdoctoral Fellow</strong>, XYZ University (2020–Present)</li>
-        <li><strong>Research Assistant</strong>, ABC University (2014–2016)</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- PUBLICATIONS -->
-  <section>
-    <h2>Publications</h2>
-    <div class="content">
-      <ul>
-        <li>Doe J., et al. (2023). <em>Role of RNA-binding proteins in stress granule formation</em>. Cell Journal.</li>
-        <li>Doe J., et al. (2021). <em>Gene expression modulation under heat shock conditions</em>. Molecular Biology Reports.</li>
-        <li>Doe J., et al. (2019). <em>Proteomic analysis of stress response pathways</em>. Journal of Biochemistry.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- AWARDS -->
-  <section>
-    <h2>Awards</h2>
-    <div class="content">
-      <ul>
-        <li>ABC University Research Excellence Award (2019)</li>
-        <li>XYZ University Best Thesis Award (2020)</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section>
-    <h2>Skills</h2>
-    <div class="content">
-      <ul>
-        <li>Protein purification &amp; western blotting</li>
-        <li>RNA-seq and gene expression analysis</li>
-        <li>Bioinformatics (Python, R)</li>
-        <li>Fluorescence microscopy</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- REFERENCES -->
-  <section>
-    <h2>References</h2>
-    <div class="content">
-      <p>Available upon request.</p>
-    </div>
-  </section>
-
+  <!-- Duplicate the above block for other sections (e.g., "Experience", "Skills", etc.) -->
+  
 </body>
 </html>
