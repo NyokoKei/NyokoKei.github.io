@@ -48,8 +48,9 @@
       padding: 20px;
     }
     table {
-      width: 100%;
+      width: 90%;
       border-collapse: collapse;
+      margin-left: 50px; /* Extra space from the left border */
     }
     td {
       padding: 10px;
@@ -65,25 +66,52 @@
       width: 75%;
       padding-left: 20px;
     }
-    ul {
-      list-style-type: disc;
-      margin: 0;
-      padding-left: 20px;
+    /* Styles for the nested education table */
+    .education-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .education-table td {
+      padding: 5px 10px;
+      vertical-align: top;
+    }
+    .edu-year {
+      width: 30%;
+      font-weight: bold;
+    }
+    .edu-details {
+      width: 70%;
+    }
+    /* Styles for the nested experience table */
+    .experience-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .experience-table td {
+      padding: 5px 10px;
+      vertical-align: top;
+    }
+    .exp-year {
+      width: 30%;
+      font-weight: bold;
+    }
+    .exp-details {
+      width: 70%;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Name Surname</h1>
-    <h2>Master Student at the University</h2>
+    <h1>John Doe</h1>
+    <h2>Master Student at the University of Example</h2>
     <div class="contacts">
-      <a href="https://github.com/yourusername" target="_blank">
+      <a href="https://github.com/johndoe" target="_blank">
         <i class="fab fa-github"></i>GitHub
       </a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank">
+      <a href="https://linkedin.com/in/johndoe" target="_blank">
         <i class="fab fa-linkedin"></i>LinkedIn
       </a>
-      <a href="mailto:youremail@gmail.com">
+      <a href="mailto:johndoe@example.com">
         <i class="fas fa-envelope"></i>Gmail
       </a>
       <a href="tel:+1234567890">
@@ -96,28 +124,58 @@
       <tr>
         <td class="section-name">Research Field</td>
         <td class="section-attributes">
-          Research Topic 1, Research Topic 2, Research Topic 3, ...
+          My research focuses on computational neuroscience and machine learning. I explore algorithmic models that mimic brain functions and improve data analysis techniques.
         </td>
       </tr>
       <tr>
         <td class="section-name">Education</td>
         <td class="section-attributes">
-          <ul>
-            <li>Bachelor</li>
-            <li>Master</li>
-          </ul>
+          <table class="education-table">
+            <tr>
+              <td class="edu-year">2015–2019</td>
+              <td class="edu-details">
+                B.Sc. in Computer Science<br>
+                University of Example
+              </td>
+            </tr>
+            <tr>
+              <td class="edu-year">2019–2021</td>
+              <td class="edu-details">
+                M.Sc. in Artificial Intelligence<br>
+                University of Example
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
       <tr>
         <td class="section-name">Experience</td>
         <td class="section-attributes">
-          Brief overview of professional experience, internships, or projects.
+          <table class="experience-table">
+            <tr>
+              <td class="exp-year">2020–2021</td>
+              <td class="exp-details">
+                Research Assistant<br>
+                University of Example AI Lab
+              </td>
+            </tr>
+            <tr>
+              <td class="exp-year">Summer 2019</td>
+              <td class="exp-details">
+                Intern<br>
+                Tech Innovators Inc.
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
       <tr>
         <td class="section-name">Publications</td>
         <td class="section-attributes">
-          List your publications or research papers here.
+          <ul>
+            <li>Doe, J. (2020). Deep Learning for Neural Mapping. <em>Journal of Computational Neuroscience</em>.</li>
+            <li>Doe, J. &amp; Smith, A. (2021). Advances in Machine Learning. <em>International Conference on AI</em>.</li>
+          </ul>
         </td>
       </tr>
     </table>
