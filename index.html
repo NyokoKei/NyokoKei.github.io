@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hong Hai Ngo</title>
   <!-- Font Awesome for icons -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7O+GLQ6pA6+E9R+5d4D8YFQ4FdfE8p1V5rK"
+    crossorigin="anonymous"
+  />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -48,7 +53,7 @@
       border-collapse: collapse;
       margin-left: 50px; /* Extra space from the left border */
     }
-    /* Only apply a border line to the first three rows */
+    /* Only the top-level rows (except the last one) get a border */
     table.main-table tr:not(:last-child) {
       border-bottom: 1px solid #ccc;
     }
@@ -65,29 +70,26 @@
       width: 75%;
       padding-left: 20px;
     }
-    /* Nested education table styles */
-    .education-table {
+    /* Nested table styles for Education and Experience */
+    table.education-table,
+    table.experience-table {
       width: 100%;
       border-collapse: collapse;
+      border: none;
     }
-    .education-table td {
-      vertical-align: top;
+    /* Remove any borders from nested table rows */
+    table.education-table tr,
+    table.experience-table tr {
+      border: none !important;
     }
+    /* Education cell widths */
     .edu-year {
       width: 30%;
     }
     .edu-details {
       width: 70%;
     }
-    /* Nested experience table styles */
-    .experience-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .experience-table td {
-      padding: 5px 10px;
-      vertical-align: top;
-    }
+    /* Experience cell widths */
     .exp-year {
       width: 30%;
     }
@@ -99,16 +101,21 @@
 <body>
   <header>
     <h1>Hong Hai Ngo</h1>
-    <h3>Master's Student @ <a href="https://www.nlp.ecei.tohoku.ac.jp" target="_blank" rel="noopener noreferrer">Tohoku University NLP lab</a></h3>
+    <h3>
+      Master's Student @ 
+      <a href="https://www.nlp.ecei.tohoku.ac.jp" target="_blank" rel="noopener noreferrer">
+        Tohoku University NLP lab
+      </a>
+    </h3>
     <div class="contacts">
       <a href="https://github.com/NyokoKei" target="_blank">
-        <i class="fab fa-github"></i>GitHub
+        <i class="fa fa-github"></i>
       </a>
       <a href="https://www.linkedin.com/in/hhngo9029/" target="_blank">
-        <i class="fab fa-linkedin"></i>LinkedIn
+        <i class="fa fa-linkedin"></i>LinkedIn
       </a>
       <a href="mailto:ngohonghai2001@gmail.com">
-        <i class="fas fa-envelope"></i>Gmail
+        <i class="fa fa-envelope"></i>Gmail
       </a>
     </div>
   </header>
