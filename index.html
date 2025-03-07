@@ -2,75 +2,190 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Researcher CV</title>
-
-  <!-- Include Bulma CSS -->
-  <link rel="stylesheet" 
-        href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academic Personal Page</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXRNri4myXolpl8OW4+ZopEykF6Nw+BBR3F0RGFb6wXbqZ3d0jFnJCzYxA1s9LLnjE8g3ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    /* Override .subtitle color to deep rose */
-    .subtitle {
-      color: #C85FA4 !important;
+    /* Reset and basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #fff;
+      color: #333;
+      padding: 20px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Navigation Menu */
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 15px;
+      font-size: 1.1em;
+    }
+    nav a:hover {
+      color: #D81B60;
+    }
+    /* Header Section */
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+    /* Contacts (icons) */
+    .contacts a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+      font-size: 1.2em;
+    }
+    .contacts a:hover {
+      color: #D81B60;
+    }
+    /* Section Styles */
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
+      color: #D81B60;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #D81B60;
+      padding-bottom: 5px;
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .column {
+      flex: 1;
+      min-width: 250px;
+      padding: 10px;
+    }
+    /* Two-column layout for items */
+    .item {
+      display: flex;
+      margin-bottom: 15px;
+    }
+    .item .item-title {
+      flex: 1;
+      font-weight: bold;
+    }
+    .item .item-info {
+      flex: 2;
+    }
+    /* Publications filter */
+    #pub-filter {
+      margin-bottom: 15px;
+      padding: 5px;
+      width: 100%;
+      max-width: 300px;
+    }
+    .publication-item {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
+  <!-- Navigation Menu -->
+  <nav>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#publications">Publications</a>
+  </nav>
+
+  <!-- Header with Name and Position -->
+  <header>
+    <h1>John Doe</h1>
+    <p>Master Student</p>
+    <!-- Contacts -->
+    <div class="contacts">
+      <a href="mailto:john.doe@example.com" title="Gmail"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/johndoe" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/johndoe" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="tel:+1234567890" title="Phone"><i class="fas fa-phone"></i></a>
+    </div>
+  </header>
 
   <!-- Education Section -->
-  <div class="section mx-6">
-    <div class="columns">
-      <div class="column is-2 has-text-right has-text-centered-mobile">
-        <p class="subtitle">Education</p>
-      </div>
+  <section id="education">
+    <h2>Education</h2>
+    <div class="content">
       <div class="column">
-        <div class="content">
-          <table>
-            <tbody>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <strong>PhD, Information Sciences (in progress)</strong><br>
-                  <small>
-                    April 2021 – *March 2025 (planned)<br>
-                    <i>Graduate School of Information Sciences, Tohoku University</i>
-                  </small>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <strong>Master of Science in Computing</strong><br>
-                  <small>
-                    October 2016 – September 2018<br>
-                    <i>Faculty of Electrical Engineering and Computing, 
-                       University of Zagreb</i>
-                  </small>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <strong>Bachelor of Science in Computing</strong><br>
-                  <small>
-                    October 2013 – September 2016<br>
-                    <i>Faculty of Electrical Engineering and Computing, 
-                       University of Zagreb</i>
-                  </small>
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="item">
+          <div class="item-title">2020 - Present</div>
+          <div class="item-info">Master of Science in Computer Science, University Name</div>
+        </div>
+        <div class="item">
+          <div class="item-title">2016 - 2020</div>
+          <div class="item-info">Bachelor of Science in Information Technology, Another University</div>
         </div>
       </div>
-      <div class="column is-1"></div>
     </div>
-  </div>
+  </section>
 
-  <!-- Duplicate the above block for other sections (e.g., "Experience", "Skills", etc.) -->
-  
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="content">
+      <div class="column">
+        <div class="item">
+          <div class="item-title">2021 - Present</div>
+          <div class="item-info">Research Assistant, University Lab</div>
+        </div>
+        <div class="item">
+          <div class="item-title">2020 - 2021</div>
+          <div class="item-info">Intern, Tech Company</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section with Filter -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <input type="text" id="pub-filter" placeholder="Filter publications...">
+    <div id="pub-list">
+      <div class="publication-item" data-title="Deep Learning in Medical Imaging">
+        <strong>Deep Learning in Medical Imaging</strong> – Journal of Medical AI, 2023.
+      </div>
+      <div class="publication-item" data-title="Advances in Neural Networks">
+        <strong>Advances in Neural Networks</strong> – Conference on AI Research, 2022.
+      </div>
+      <div class="publication-item" data-title="A Study on Data Mining Techniques">
+        <strong>A Study on Data Mining Techniques</strong> – International Journal of Data Science, 2021.
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Filter publications as user types
+    document.getElementById('pub-filter').addEventListener('input', function() {
+      var filter = this.value.toLowerCase();
+      var publications = document.querySelectorAll('.publication-item');
+      publications.forEach(function(pub) {
+        var title = pub.getAttribute('data-title').toLowerCase();
+        pub.style.display = title.includes(filter) ? '' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>
+
