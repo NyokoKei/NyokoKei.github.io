@@ -2,203 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Academic Personal Page</title>
   <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
-        integrity="sha512-Fo3rlrZj/k7ujTTXRNri4myXolpl8OW4+ZopEykF6Nw+BBR3F0RGFb6wXbqZ3d0jFnJCzYxA1s9LLnjE8g3ow==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7O+GLQ6pA6+E9R+5d4D8YFQ4FdfE8p1V5rK"
+    crossorigin="anonymous"
+  />
   <style>
-    /* Reset & Basic Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
       font-family: Arial, sans-serif;
-      background: #fff;
-      color: #333;
+      margin: 0;
+      padding: 0;
       line-height: 1.6;
-      padding: 20px;
     }
-    html {
-      scroll-behavior: smooth;
-    }
-    /* Navigation Menu */
-    nav {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    nav a {
-      text-decoration: none;
-      color: #333;
-      margin: 0 15px;
-      font-size: 1.1em;
-    }
-    nav a:hover {
-      color: #D81B60;
-    }
-    /* Header Section */
     header {
       text-align: center;
-      margin-bottom: 30px;
+      padding: 20px;
+      background: #f5f5f5;
     }
     header h1 {
+      margin: 0;
       font-size: 2.5em;
-      margin-bottom: 5px;
     }
-    header p.position {
+    header h2 {
+      margin: 5px 0;
       font-size: 1.2em;
-      margin-bottom: 15px;
+      color: #555;
     }
-    /* Contacts with icons and text */
     .contacts {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      font-size: 1em;
+      margin-top: 10px;
     }
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .contacts a {
+      margin: 0 10px;
       color: #333;
       text-decoration: none;
+      font-size: 1em;
     }
-    .contact-item:hover {
-      color: #D81B60;
+    .contacts a i {
+      margin-right: 5px;
     }
-    /* Section Styles */
-    section {
-      margin-bottom: 40px;
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
     }
-    section h2 {
-      color: #D81B60;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #D81B60;
+    .column {
+      flex: 1;
+      padding: 20px;
+      min-width: 300px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section h3 {
+      border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
+      margin-bottom: 10px;
     }
-    .content-columns {
-      display: flex;
-      flex-wrap: wrap;
+    ul {
+      list-style-type: none;
+      padding: 0;
     }
-    .col-label {
-      flex: 1;
-      min-width: 150px;
-      text-align: right;
-      padding-right: 15px;
-      font-weight: bold;
-    }
-    .col-info {
-      flex: 2;
-      min-width: 200px;
-    }
-    /* Publications section column layout */
-    .pub-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 20px 0;
-    }
-    .pub-label {
-      flex: 0 0 20%;
-      text-align: right;
-      padding-right: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      font-weight: bold;
-    }
-    .pub-content {
-      flex: 1;
-      min-width: 250px;
-    }
-    @media (max-width: 600px) {
-      .col-label, .pub-label {
-        text-align: center;
-        padding-right: 0;
-      }
-      .pub-wrapper {
-        flex-direction: column;
-      }
+    ul li::before {
+      content: "– ";
     }
   </style>
 </head>
 <body>
-  <!-- Navigation Menu -->
-  <nav>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#publications">Publications</a>
-  </nav>
-
-  <!-- Header with Name, Position, and Contacts -->
   <header>
-    <h1>John Doe</h1>
-    <p class="position">Master Student</p>
+    <h1>Name Surname</h1>
+    <h2>Master Student at the University</h2>
     <div class="contacts">
-      <a class="contact-item" href="mailto:john.doe@example.com">
-        <i class="fas fa-envelope"></i>
-        <span>john.doe@example.com</span>
+      <a href="https://github.com/yourusername" target="_blank">
+        <i class="fab fa-github"></i>GitHub
       </a>
-      <a class="contact-item" href="tel:+1234567890">
-        <i class="fas fa-phone"></i>
-        <span>+1 234 567 890</span>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <i class="fab fa-linkedin"></i>LinkedIn
       </a>
-      <a class="contact-item" href="https://www.linkedin.com/in/johndoe" target="_blank">
-        <i class="fab fa-linkedin"></i>
-        <span>LinkedIn</span>
+      <a href="mailto:youremail@gmail.com">
+        <i class="fas fa-envelope"></i>Gmail
       </a>
-      <a class="contact-item" href="https://github.com/johndoe" target="_blank">
-        <i class="fab fa-github"></i>
-        <span>GitHub</span>
+      <a href="tel:+1234567890">
+        <i class="fas fa-phone"></i>Phone
       </a>
     </div>
   </header>
-
-  <!-- Education Section -->
-  <section id="education">
-    <h2>Education</h2>
-    <div class="content-columns">
-      <div class="col-label">2020 - Present</div>
-      <div class="col-info">Master of Science in Computer Science, University Name</div>
-    </div>
-    <br />
-    <div class="content-columns">
-      <div class="col-label">2016 - 2020</div>
-      <div class="col-info">Bachelor of Science in Information Technology, Another University</div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="content-columns">
-      <div class="col-label">2021 - Present</div>
-      <div class="col-info">Research Assistant, University Lab</div>
-    </div>
-    <br />
-    <div class="content-columns">
-      <div class="col-label">2020 - 2021</div>
-      <div class="col-info">Intern, Tech Company</div>
-    </div>
-  </section>
-
-  <!-- Publications Section using BibBase -->
-  <section id="publications">
-    <h2>Publications</h2>
-    <div class="pub-wrapper">
-      <div class="pub-label">
-        <p class="subtitle">Publications</p>
+  <main>
+    <div class="column">
+      <div class="section">
+        <h3>Research Field</h3>
+        <p>
+          Research Topic 1, Research Topic 2, Research Topic 3, ...
+        </p>
       </div>
-      <div class="pub-content">
-        <div class="content">
-          <!-- BibBase script to show publications from a .bib file -->
-          <script src="https://bibbase.org/show?bib=https://dblp.org/pid/220/0963.bib&jsonp=1"></script>
-        </div>
+      <div class="section">
+        <h3>Education</h3>
+        <ul>
+          <li>Bachelor</li>
+          <li>Master</li>
+        </ul>
       </div>
     </div>
-  </section>
+    <div class="column">
+      <div class="section">
+        <h3>Experience</h3>
+        <p>
+          Brief overview of professional experience, internships, or projects.
+        </p>
+      </div>
+      <div class="section">
+        <h3>Publications</h3>
+        <p>
+          List your publications or research papers here.
+        </p>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
