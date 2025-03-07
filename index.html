@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Academic Personal Page</title>
   <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXRNri4myXolpl8OW4+ZopEykF6Nw+BBR3F0RGFb6wXbqZ3d0jFnJCzYxA1s9LLnjE8g3ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+        integrity="sha512-Fo3rlrZj/k7ujTTXRNri4myXolpl8OW4+ZopEykF6Nw+BBR3F0RGFb6wXbqZ3d0jFnJCzYxA1s9LLnjE8g3ow==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    /* Reset and basic styles */
+    /* Reset & Basic Styles */
     * {
       margin: 0;
       padding: 0;
@@ -15,9 +17,9 @@
     }
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
       background: #fff;
       color: #333;
+      line-height: 1.6;
       padding: 20px;
     }
     html {
@@ -40,24 +42,32 @@
     /* Header Section */
     header {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
     header h1 {
       font-size: 2.5em;
       margin-bottom: 5px;
     }
-    header p {
+    header p.position {
       font-size: 1.2em;
       margin-bottom: 15px;
     }
-    /* Contacts (icons) */
-    .contacts a {
-      text-decoration: none;
-      color: #333;
-      margin: 0 10px;
-      font-size: 1.2em;
+    /* Contacts with icons and text */
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      font-size: 1em;
     }
-    .contacts a:hover {
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+      text-decoration: none;
+    }
+    .contact-item:hover {
       color: #D81B60;
     }
     /* Section Styles */
@@ -70,36 +80,48 @@
       border-bottom: 2px solid #D81B60;
       padding-bottom: 5px;
     }
-    .content {
+    .content-columns {
       display: flex;
       flex-wrap: wrap;
     }
-    .column {
+    .col-label {
       flex: 1;
-      min-width: 250px;
-      padding: 10px;
-    }
-    /* Two-column layout for items */
-    .item {
-      display: flex;
-      margin-bottom: 15px;
-    }
-    .item .item-title {
-      flex: 1;
+      min-width: 150px;
+      text-align: right;
+      padding-right: 15px;
       font-weight: bold;
     }
-    .item .item-info {
+    .col-info {
       flex: 2;
+      min-width: 200px;
     }
-    /* Publications filter */
-    #pub-filter {
-      margin-bottom: 15px;
-      padding: 5px;
-      width: 100%;
-      max-width: 300px;
+    /* Publications section column layout */
+    .pub-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px 0;
     }
-    .publication-item {
-      margin-bottom: 10px;
+    .pub-label {
+      flex: 0 0 20%;
+      text-align: right;
+      padding-right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-weight: bold;
+    }
+    .pub-content {
+      flex: 1;
+      min-width: 250px;
+    }
+    @media (max-width: 600px) {
+      .col-label, .pub-label {
+        text-align: center;
+        padding-right: 0;
+      }
+      .pub-wrapper {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -111,81 +133,72 @@
     <a href="#publications">Publications</a>
   </nav>
 
-  <!-- Header with Name and Position -->
+  <!-- Header with Name, Position, and Contacts -->
   <header>
     <h1>John Doe</h1>
-    <p>Master Student</p>
-    <!-- Contacts -->
+    <p class="position">Master Student</p>
     <div class="contacts">
-      <a href="mailto:john.doe@example.com" title="Gmail"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/johndoe" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/johndoe" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="tel:+1234567890" title="Phone"><i class="fas fa-phone"></i></a>
+      <a class="contact-item" href="mailto:john.doe@example.com">
+        <i class="fas fa-envelope"></i>
+        <span>john.doe@example.com</span>
+      </a>
+      <a class="contact-item" href="tel:+1234567890">
+        <i class="fas fa-phone"></i>
+        <span>+1 234 567 890</span>
+      </a>
+      <a class="contact-item" href="https://www.linkedin.com/in/johndoe" target="_blank">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+      <a class="contact-item" href="https://github.com/johndoe" target="_blank">
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+      </a>
     </div>
   </header>
 
   <!-- Education Section -->
   <section id="education">
     <h2>Education</h2>
-    <div class="content">
-      <div class="column">
-        <div class="item">
-          <div class="item-title">2020 - Present</div>
-          <div class="item-info">Master of Science in Computer Science, University Name</div>
-        </div>
-        <div class="item">
-          <div class="item-title">2016 - 2020</div>
-          <div class="item-info">Bachelor of Science in Information Technology, Another University</div>
-        </div>
-      </div>
+    <div class="content-columns">
+      <div class="col-label">2020 - Present</div>
+      <div class="col-info">Master of Science in Computer Science, University Name</div>
+    </div>
+    <br />
+    <div class="content-columns">
+      <div class="col-label">2016 - 2020</div>
+      <div class="col-info">Bachelor of Science in Information Technology, Another University</div>
     </div>
   </section>
 
   <!-- Experience Section -->
   <section id="experience">
     <h2>Experience</h2>
-    <div class="content">
-      <div class="column">
-        <div class="item">
-          <div class="item-title">2021 - Present</div>
-          <div class="item-info">Research Assistant, University Lab</div>
-        </div>
-        <div class="item">
-          <div class="item-title">2020 - 2021</div>
-          <div class="item-info">Intern, Tech Company</div>
-        </div>
-      </div>
+    <div class="content-columns">
+      <div class="col-label">2021 - Present</div>
+      <div class="col-info">Research Assistant, University Lab</div>
+    </div>
+    <br />
+    <div class="content-columns">
+      <div class="col-label">2020 - 2021</div>
+      <div class="col-info">Intern, Tech Company</div>
     </div>
   </section>
 
-  <!-- Publications Section with Filter -->
+  <!-- Publications Section using BibBase -->
   <section id="publications">
     <h2>Publications</h2>
-    <input type="text" id="pub-filter" placeholder="Filter publications...">
-    <div id="pub-list">
-      <div class="publication-item" data-title="Deep Learning in Medical Imaging">
-        <strong>Deep Learning in Medical Imaging</strong> – Journal of Medical AI, 2023.
+    <div class="pub-wrapper">
+      <div class="pub-label">
+        <p class="subtitle">Publications</p>
       </div>
-      <div class="publication-item" data-title="Advances in Neural Networks">
-        <strong>Advances in Neural Networks</strong> – Conference on AI Research, 2022.
-      </div>
-      <div class="publication-item" data-title="A Study on Data Mining Techniques">
-        <strong>A Study on Data Mining Techniques</strong> – International Journal of Data Science, 2021.
+      <div class="pub-content">
+        <div class="content">
+          <!-- BibBase script to show publications from a .bib file -->
+          <script src="https://bibbase.org/show?bib=https://dblp.org/pid/220/0963.bib&jsonp=1"></script>
+        </div>
       </div>
     </div>
   </section>
-
-  <script>
-    // Filter publications as user types
-    document.getElementById('pub-filter').addEventListener('input', function() {
-      var filter = this.value.toLowerCase();
-      var publications = document.querySelectorAll('.publication-item');
-      publications.forEach(function(pub) {
-        var title = pub.getAttribute('data-title').toLowerCase();
-        pub.style.display = title.includes(filter) ? '' : 'none';
-      });
-    });
-  </script>
 </body>
 </html>
-
