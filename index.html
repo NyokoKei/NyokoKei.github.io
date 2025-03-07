@@ -4,39 +4,76 @@
   <meta charset="UTF-8">
   <title>Jane Doe – Researcher CV</title>
   <style>
+    /* Basic reset and box-sizing for consistent spacing */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
       line-height: 1.6;
       max-width: 800px;
     }
+
+    /* "Deep Rose" color for headings */
+    h1, h2 {
+      color: #C85FA4; /* Adjust this hex if you want a different shade */
+    }
+
     header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
-    header h1 {
-      margin-bottom: 0;
-    }
+
     header p {
-      margin-top: 5px;
+      margin: 5px 0;
       font-style: italic;
       color: #555;
     }
+
+    /* Contact Info / Social Media styling */
+    .contact-info {
+      margin: 10px 0;
+    }
+    .social-media {
+      margin-top: 5px;
+    }
+    .social-media a {
+      text-decoration: none;
+      color: #C85FA4;
+      margin-right: 10px;
+    }
+
+    /* Two-column layout for sections:
+       Heading on the left, content on the right */
     section {
-      margin-bottom: 30px;
+      display: flex;
+      margin-bottom: 20px;
+      align-items: flex-start; /* Ensures heading is aligned at the top */
     }
-    h2 {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
-      margin-bottom: 10px;
+
+    /* Left column: heading */
+    section h2 {
+      flex: 0 0 150px; /* Fixed width for headings */
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 1.2em;
+      /* Removed border-right to eliminate the vertical line */
+      padding-right: 10px;
+      box-sizing: border-box;
     }
+
+    /* Right column: content */
+    section .content {
+      flex: 1;
+      padding-left: 15px;
+    }
+
     ul {
       list-style-type: disc;
-      margin-left: 25px;
-    }
-    .contact-info {
-      font-size: 0.95em;
-      color: #333;
+      margin: 0;         /* Remove default margin */
+      padding-left: 20px;/* Space for bullet indentation */
     }
   </style>
 </head>
@@ -45,64 +82,91 @@
   <header>
     <h1>Jane Doe</h1>
     <p>Ph.D. in Molecular Biology</p>
-    <div class="contact-info">
-      <p>Email: jane.doe@example.com | Phone: +1 (123) 456-7890</p>
-      <p>Address: 123 Science Rd, University Town, USA</p>
-    </div>
   </header>
 
+  <!-- CONTACT / SOCIAL MEDIA -->
   <section>
-    <h2>Research Interests</h2>
-    <p>My research focuses on gene expression regulation in eukaryotic cells, with particular emphasis on RNA-binding proteins and their role in cellular stress responses.</p>
+    <h2>Contact</h2>
+    <div class="content">
+      <div class="contact-info">
+        <p><strong>Email:</strong> jane.doe@example.com</p>
+        <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+        <p><strong>Address:</strong> 123 Science Rd, University Town, USA</p>
+      </div>
+      <div class="social-media">
+        <strong>Social Media:</strong><br>
+        <a href="https://twitter.com/janedoe" target="_blank">Twitter</a>
+        <a href="https://linkedin.com/in/janedoe" target="_blank">LinkedIn</a>
+        <a href="https://github.com/janedoe" target="_blank">GitHub</a>
+      </div>
+    </div>
   </section>
 
+  <!-- EDUCATION -->
   <section>
     <h2>Education</h2>
-    <ul>
-      <li><strong>Ph.D. in Molecular Biology</strong>, XYZ University (2016–2020)</li>
-      <li><strong>M.S. in Biochemistry</strong>, ABC University (2014–2016)</li>
-      <li><strong>B.S. in Biology</strong>, DEF College (2010–2014)</li>
-    </ul>
+    <div class="content">
+      <ul>
+        <li><strong>Ph.D. in Molecular Biology</strong>, XYZ University (2016–2020)</li>
+        <li><strong>M.S. in Biochemistry</strong>, ABC University (2014–2016)</li>
+        <li><strong>B.S. in Biology</strong>, DEF College (2010–2014)</li>
+      </ul>
+    </div>
   </section>
 
+  <!-- EXPERIENCE -->
   <section>
     <h2>Experience</h2>
-    <ul>
-      <li><strong>Postdoctoral Fellow</strong>, XYZ University (2020–Present)</li>
-      <li><strong>Research Assistant</strong>, ABC University (2014–2016)</li>
-    </ul>
+    <div class="content">
+      <ul>
+        <li><strong>Postdoctoral Fellow</strong>, XYZ University (2020–Present)</li>
+        <li><strong>Research Assistant</strong>, ABC University (2014–2016)</li>
+      </ul>
+    </div>
   </section>
 
+  <!-- PUBLICATIONS -->
   <section>
     <h2>Publications</h2>
-    <ul>
-      <li>Doe J., et al. (2023). <em>Role of RNA-binding proteins in stress granule formation</em>. Cell Journal.</li>
-      <li>Doe J., et al. (2021). <em>Gene expression modulation under heat shock conditions</em>. Molecular Biology Reports.</li>
-      <li>Doe J., et al. (2019). <em>Proteomic analysis of stress response pathways</em>. Journal of Biochemistry.</li>
-    </ul>
+    <div class="content">
+      <ul>
+        <li>Doe J., et al. (2023). <em>Role of RNA-binding proteins in stress granule formation</em>. Cell Journal.</li>
+        <li>Doe J., et al. (2021). <em>Gene expression modulation under heat shock conditions</em>. Molecular Biology Reports.</li>
+        <li>Doe J., et al. (2019). <em>Proteomic analysis of stress response pathways</em>. Journal of Biochemistry.</li>
+      </ul>
+    </div>
   </section>
 
+  <!-- AWARDS -->
   <section>
-    <h2>Awards & Honors</h2>
-    <ul>
-      <li>ABC University Research Excellence Award (2019)</li>
-      <li>XYZ University Best Thesis Award (2020)</li>
-    </ul>
+    <h2>Awards</h2>
+    <div class="content">
+      <ul>
+        <li>ABC University Research Excellence Award (2019)</li>
+        <li>XYZ University Best Thesis Award (2020)</li>
+      </ul>
+    </div>
   </section>
 
+  <!-- SKILLS -->
   <section>
     <h2>Skills</h2>
-    <ul>
-      <li>Protein purification & western blotting</li>
-      <li>RNA-seq and gene expression analysis</li>
-      <li>Bioinformatics (Python, R)</li>
-      <li>Fluorescence microscopy</li>
-    </ul>
+    <div class="content">
+      <ul>
+        <li>Protein purification &amp; western blotting</li>
+        <li>RNA-seq and gene expression analysis</li>
+        <li>Bioinformatics (Python, R)</li>
+        <li>Fluorescence microscopy</li>
+      </ul>
+    </div>
   </section>
 
+  <!-- REFERENCES -->
   <section>
     <h2>References</h2>
-    <p>Available upon request.</p>
+    <div class="content">
+      <p>Available upon request.</p>
+    </div>
   </section>
 
 </body>
